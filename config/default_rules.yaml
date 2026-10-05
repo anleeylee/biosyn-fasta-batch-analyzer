@@ -1,0 +1,19 @@
+# BioSyn FASTA Batch Analyzer — Default QC Rules
+# Copy and modify to create your own rule set.
+
+qc_rules:
+  max_sequence_length: 100000        # Flag sequences longer than this
+  ambiguous_warn_threshold: 0.10      # >10% ambiguous → REVIEW
+  min_sequence_length: 1             # Shorter than this → INVALID
+  flag_duplicate_ids: true
+  flag_unknown_type: true
+
+analysis:
+  gc_denominator: unambiguous         # unambiguous | all_bases
+  molecular_weight_model: polymer_ssDNA  # polymer_ssDNA | free_nucleotide
+  pi_method: bjellqvist              # bjellqvist | average
+
+export:
+  formats: [csv, xlsx, html]
+  include_reverse_complement: true
+  include_methods_sheet: true

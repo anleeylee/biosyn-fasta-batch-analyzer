@@ -1,0 +1,18 @@
+# ============================================================
+# BioSyn FASTA Batch Analyzer — Python Dependencies
+# Python 3.10+ required
+# ============================================================
+
+# XLSX export (optional — without it, CSV and HTML export still works)
+openpyxl>=3.1.0
+
+# ----------------------------------------------------------
+# Optional: advanced plotting (not required for core analysis)
+# matplotlib>=3.8.0
+#
+# Optional: Biopython (replaces built-in pI calculation)
+# biopython>=1.83
+#
+# Core analysis engine uses only Python standard library:
+#   argparse, csv, dataclasses, logging, math, pathlib, typing
+# ============================================================
